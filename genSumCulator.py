@@ -42,7 +42,7 @@ if __name__ == "__main__":
 	out("# -*- coding: utf-8 -*-")
 	out("")
 
-	out4(0, "def sum2Number(a : int, b : int):")
+	out4(0, "def sum2Number(a : int, b : int) -> int:")
 	out4(1, "if(a < 0 or b < 0):")
 	out4(2, "raise ValueError(\"sumCulator can add only positive (+ zero) numbers\")")
 	out4(1, f"if(a > {N} or b > {N}):")
@@ -63,7 +63,7 @@ if __name__ == "__main__":
 				toFile = StringIO()
 				li = 0
 			out4(1, f"if(a == {i} and b == {j}):")
-			out4(2, f"print({i+j})")
+			out4(2, f"return {i+j}")
 
 	out("")
 
@@ -76,7 +76,7 @@ if __name__ == "__main__":
 		out4(2, f"print(\"> python {fileName} number1 number2\")")
 	out4(2, "exit()")
 	out4(1, "a, b = map(int, (sys.argv[1], sys.argv[2]))")
-	out4(1, "sum2Number(a, b)")
+	out4(1, "print(sum2Number(a, b))")
 
 
 

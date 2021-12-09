@@ -26,62 +26,62 @@
 import sys
 # -*- coding: utf-8 -*-
 
-def sum2Number(a : int, b : int):
+def sum2Number(a : int, b : int) -> int:
     if(a < 0 or b < 0):
         raise ValueError("sumCulator can add only positive (+ zero) numbers")
     if(a > 4 or b > 4):
         raise ValueError("sumCulator can add only numbers, not more than 4")
 
     if(a == 0 and b == 0):
-        print(0)
+        return 0
     if(a == 0 and b == 1):
-        print(1)
+        return 1
     if(a == 0 and b == 2):
-        print(2)
+        return 2
     if(a == 0 and b == 3):
-        print(3)
+        return 3
     if(a == 0 and b == 4):
-        print(4)
+        return 4
     if(a == 1 and b == 0):
-        print(1)
+        return 1
     if(a == 1 and b == 1):
-        print(2)
+        return 2
     if(a == 1 and b == 2):
-        print(3)
+        return 3
     if(a == 1 and b == 3):
-        print(4)
+        return 4
     if(a == 1 and b == 4):
-        print(5)
+        return 5
     if(a == 2 and b == 0):
-        print(2)
+        return 2
     if(a == 2 and b == 1):
-        print(3)
+        return 3
     if(a == 2 and b == 2):
-        print(4)
+        return 4
     if(a == 2 and b == 3):
-        print(5)
+        return 5
     if(a == 2 and b == 4):
-        print(6)
+        return 6
     if(a == 3 and b == 0):
-        print(3)
+        return 3
     if(a == 3 and b == 1):
-        print(4)
+        return 4
     if(a == 3 and b == 2):
-        print(5)
+        return 5
     if(a == 3 and b == 3):
-        print(6)
+        return 6
     if(a == 3 and b == 4):
-        print(7)
+        return 7
     if(a == 4 and b == 0):
-        print(4)
+        return 4
     if(a == 4 and b == 1):
-        print(5)
+        return 5
     if(a == 4 and b == 2):
-        print(6)
+        return 6
     if(a == 4 and b == 3):
-        print(7)
+        return 7
     if(a == 4 and b == 4):
-        print(8)
+        return 8
 
 if __name__ == "__main__":
     if(len(sys.argv) != 3):
@@ -89,5 +89,13 @@ if __name__ == "__main__":
         print("> python sumCulator.py number1 number2")
         exit()
     a, b = map(int, (sys.argv[1], sys.argv[2]))
-    sum2Number(a, b)
+    print(sum2Number(a, b))
 ```
+
+В зависимости от `N`, файл будет занимать разный размер. Примерный размер можно высчитать по формуле: fileSize = ![(N^2/1000000)*48 (см. https://www.wolframalpha.com/input/?i=%28%28N*N%29%2F1000000%29*48)](https://i.imgur.com/4SgQYwR.png) МБ
+
+# Известные проблемы
+
+- Если задать N слишком большим, а потом резко выключить ПК (например, потому что он завис), то файловая система может отреагировать самым непредсказуемым образом.
+
+![error](https://i.imgur.com/bT1KRNY.png)
