@@ -51,3 +51,5 @@ if __name__ == "__main__":
 *Additional Notes:*  **IT MAY TAKE A VERY LONG TIME TO "INITIALIZE" THE `sumCulator`**
 
 Пользуйтесь на здоровье!
+
+![](https://i.imgur.com/AI1zqLk.png)
