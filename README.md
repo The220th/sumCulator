@@ -27,7 +27,7 @@ import sumCulator
 # -*- coding: utf-8 -*-
 
 if __name__ == "__main__":
-    print( sumCulator.sum2Number(1376, 3675) ) # выведет 5051
+    print( sumCulator.sum2Number(327, 1178) ) # выведет 1505
 ```
 
 # Генерация другого sumCulator
