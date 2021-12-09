@@ -1,0 +1,2 @@
+# sumCulator
+sumCulator=/
